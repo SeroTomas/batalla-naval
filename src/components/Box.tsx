@@ -1,6 +1,6 @@
 import { BoxInterface } from "@/models";
-import style from "./box.module.css";
 import { useGameContext } from "@/context/gameContext";
+import { StyledBox } from "./atoms";
 
 const Box = ({ coordinate }: BoxInterface) => {
 
@@ -11,9 +11,9 @@ const Box = ({ coordinate }: BoxInterface) => {
     }
 
     return (
-        <div className={style.box} onClick={handlerClick}>
+        <StyledBox onClick={handlerClick}>
             <p>{coordinate}</p>
-        </div>
+        </StyledBox>
     )
 
 

@@ -1,14 +1,12 @@
 import { ColumnInterface } from "@/models";
-import style from "./column.module.css";
+import { StyledColumn } from "./atoms";
 import Box from "./Box";
 
 const Column = ({ column }: ColumnInterface) => {
     return (
-        <div className={style.column}>
-            {
-                column.map(coordinate => <Box coordinate={coordinate} />)
-            }
-        </div>
+        <StyledColumn>
+            {column.map(coordinate => <Box coordinate={coordinate} />)}
+        </StyledColumn>
     )
 }
 export default Column;

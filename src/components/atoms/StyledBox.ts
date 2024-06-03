@@ -1,4 +1,8 @@
-.box{
+import { styled } from "@root/styled-system/jsx";
+ 
+// Create a styled component
+export const StyledBox = styled.div`
+
     display: grid;
     place-items:center;
     height: 50px;
@@ -9,4 +13,4 @@
         background-color: aqua;
     }
 
-}
+`
