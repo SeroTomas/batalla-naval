@@ -1,1 +1,1 @@
-export * from './BoxInterface';
+export * from './Interfaces';
