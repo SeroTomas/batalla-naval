@@ -14,3 +14,8 @@ export interface ColumnInterface{
 export interface BoardInterface{
     board: Board;
 }
+
+export interface GameContextInterface{
+    coordinates: Coordinate
+    shipCoordinates: Coordinate[]
+}
