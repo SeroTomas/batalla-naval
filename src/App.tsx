@@ -1,4 +1,5 @@
 import Board from "./components/Board"
+import { GameProvider } from "./context/gameContext"
 
 const boardCoordinates = [
   ["0-0", "0-1", "0-2", "0-3", "0-4", "0-5", "0-6", "0-7", "0-8", "0-9"],
@@ -13,12 +14,13 @@ const boardCoordinates = [
   ["9-0", "9-1", "9-2", "9-3", "9-4", "9-5", "9-6", "9-7", "9-8", "9-9"]
 ]
 
-
 function App() {
 
   return (
     <>
-      <Board board={boardCoordinates}/>
+      <GameProvider>
+        <Board board={boardCoordinates} />
+      </GameProvider>
     </>
   )
 

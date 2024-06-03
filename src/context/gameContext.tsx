@@ -1,13 +1,29 @@
 
-import { GameContextInterface } from "@/models";
 import { createContext, useContext, useState } from "react";
 
-const initialContext : GameContextInterface = {
-    coordinates: "",
+
+interface InitialGameState{
+    coordinate: string
+    shipCoordinates: string[]
+}
+
+interface GameContext{
+    game: InitialGameState
+    setGame: React.Dispatch<React.SetStateAction<InitialGameState>>
+}
+
+const initialGameState: InitialGameState= {
+    coordinate: "",
     shipCoordinates: []
 }
 
-export const GameContext = createContext({});
+const initialGameContext : GameContext = {
+    game: initialGameState,
+    setGame(){}
+}
+
+
+const GameContext = createContext<GameContext>(initialGameContext)
 
 
 interface Props {
@@ -16,7 +32,7 @@ interface Props {
 
 export const GameProvider = ({ children }: Props) => {
 
-    const [game, setGame] = useState(initialContext);
+    const [game, setGame] = useState(initialGameState);
 
     return (
         <GameContext.Provider value={{ game, setGame }}>
