@@ -5,8 +5,6 @@ interface Props{
     slots: number
 }
 
-
-
 const Ship = ({ slots }: Props) => {
 
     const {game, setGame} = useGameContext();

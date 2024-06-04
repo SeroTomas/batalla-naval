@@ -14,9 +14,3 @@ export interface ColumnInterface{
 export interface BoardInterface{
     board: Board;
 }
-
-export interface Ship{
-    id: string
-    slots: number
-    coordinates?: Coordinate[]
-}

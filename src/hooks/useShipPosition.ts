@@ -1,17 +1,16 @@
 import { useGameContext } from "@/context/gameContext"
 
-interface Props{
-    coordinate: string
-    shipSelected: number
-    orientation:string
+interface Props {
+  shipSelected: number
+  orientation: string
 }
 
-const useShipPosition = ({coordinate, shipSelected, orientation}:Props) => {
+const useShipPosition = ({shipSelected, orientation }: Props) => {
 
-  const {game, setGame} = useGameContext();
-  
+  const { game, setGame } = useGameContext();
 
 
-  return 
+
+  return
 }
 export default useShipPosition

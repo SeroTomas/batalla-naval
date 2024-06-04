@@ -2,6 +2,16 @@ import { ShipSelector } from "./components";
 import Board from "./components/Board"
 import { GameProvider, useGameContext } from "./context/gameContext"
 
+/**
+ * pasos del juego
+ * Posicionamiento de los barcos
+ * juego
+ * puntuacion
+ * jugar de nuevo
+ */
+
+
+
 const boardCoordinates = [
   ["0-0", "0-1", "0-2", "0-3", "0-4", "0-5", "0-6", "0-7", "0-8", "0-9"],
   ["1-0", "1-1", "1-2", "1-3", "1-4", "1-5", "1-6", "1-7", "1-8", "1-9"],
@@ -15,19 +25,15 @@ const boardCoordinates = [
   ["9-0", "9-1", "9-2", "9-3", "9-4", "9-5", "9-6", "9-7", "9-8", "9-9"]
 ]
 
-/**
- * pasos del juego
- * Posicionamiento de los barcos
- * juego
- * puntuacion
- * jugar de nuevo
- */
+
 
 function App() {
 
   const gameState = useGameContext();
 
   
+
+
   
 
   

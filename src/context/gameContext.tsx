@@ -1,33 +1,30 @@
 
-import { Ship } from "@/models";
+import { ships, Ship } from "@/utils";
 import { createContext, useContext, useState } from "react";
 
-
-interface InitialGameState{
+interface InitialGameState {
     coordinate: string
     shipSelected: number
     ships: Ship[]
 }
 
-interface GameContext{
+interface GameContext {
     game: InitialGameState
     setGame: React.Dispatch<React.SetStateAction<InitialGameState>>
 }
 
-const initialGameState: InitialGameState= {
+const initialGameState: InitialGameState = {
     coordinate: "",
     shipSelected: 0,
-    ships: []
+    ships: ships,
 }
 
-const initialGameContext : GameContext = {
+const initialGameContext: GameContext = {
     game: initialGameState,
-    setGame(){}
+    setGame() { }
 }
-
 
 const GameContext = createContext<GameContext>(initialGameContext)
-
 
 interface Props {
     children: React.ReactNode
@@ -39,8 +36,6 @@ export const GameProvider = ({ children }: Props) => {
 
     console.log(game.shipSelected);
     console.log(game.coordinate);
-    
-    
 
     return (
         <GameContext.Provider value={{ game, setGame }}>
