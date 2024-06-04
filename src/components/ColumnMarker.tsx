@@ -1,4 +1,4 @@
-import { StyledColumnMarker, StyledMarker } from "./atoms"
+import { StyledColumnMarker, StyledMarker } from "../atoms"
 
 const columns = ["X", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
 

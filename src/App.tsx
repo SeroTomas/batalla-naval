@@ -26,6 +26,8 @@ const boardCoordinates = [
 function App() {
 
   const gameState = useGameContext();
+
+  
   
 
   

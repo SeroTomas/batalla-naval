@@ -8,7 +8,8 @@ interface Props{
 
 const useShipPosition = ({coordinate, shipSelected, orientation}:Props) => {
 
-
+  const {game, setGame} = useGameContext();
+  
 
 
   return 

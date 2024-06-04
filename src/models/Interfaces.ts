@@ -17,5 +17,6 @@ export interface BoardInterface{
 
 export interface Ship{
     id: string
+    slots: number
     coordinates?: Coordinate[]
 }

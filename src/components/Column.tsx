@@ -1,5 +1,5 @@
 import { ColumnInterface } from "@/models";
-import { StyledColumn } from "./atoms";
+import { StyledColumn } from "../atoms";
 import Box from "./Box";
 
 const Column = ({ column }: ColumnInterface) => {
