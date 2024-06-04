@@ -9,7 +9,7 @@ const Board = ({ board }: BoardInterface) => {
             <RawsMarker />
             <StyledColumns>
                 {
-                    board.map(column => <Column column={column} />)
+                    board.map(column => <Column column={column} key={column[0]}/>)
                 }
             </StyledColumns>
         </StyledBoard>

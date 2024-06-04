@@ -5,7 +5,7 @@ import Box from "./Box";
 const Column = ({ column }: ColumnInterface) => {
     return (
         <StyledColumn>
-            {column.map(coordinate => <Box coordinate={coordinate} />)}
+            {column.map(coordinate => <Box coordinate={coordinate} key={coordinate}/>)}
         </StyledColumn>
     )
 }

@@ -6,7 +6,7 @@ const RawsMarker = () => {
     return (
         <StyledRawsMarker>
             {raws.map(element => (
-                <StyledMarker>{element}</StyledMarker>
+                <StyledMarker key={element}>{element}</StyledMarker>
             ))}
         </StyledRawsMarker>
     )

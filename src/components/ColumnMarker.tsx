@@ -6,7 +6,7 @@ const ColumnMarker = () => {
     return (
         <StyledColumnMarker>
             {columns.map(element => (
-                <StyledMarker>{element}</StyledMarker>
+                <StyledMarker key={element}>{element}</StyledMarker>
             ))}
         </StyledColumnMarker>
     )

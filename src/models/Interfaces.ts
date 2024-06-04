@@ -15,3 +15,7 @@ export interface BoardInterface{
     board: Board;
 }
 
+export interface Ship{
+    id: string
+    coordinates?: Coordinate[]
+}
