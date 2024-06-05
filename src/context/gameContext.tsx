@@ -30,6 +30,7 @@ export const GameProvider = ({ children }: Props) => {
 
     const [game, setGame] = useState(initialGameState);
 
+    console.log(game.coordinate)
 
     return (
         <GameContext.Provider value={{ game, setGame }}>

@@ -1,7 +1,7 @@
 import { ShipSelector } from "./components";
 import Board from "./components/Board"
-import { GameProvider, useGameContext } from "./context/gameContext"
-import { createBoard } from "./utils";
+import { UserProvider, useUserContext, GameProvider } from "./context";
+
 
 /**
  * pasos del juego
@@ -13,11 +13,11 @@ import { createBoard } from "./utils";
 
 
 
-const myBoard = createBoard();
+
 
 function App() {
 
-  const gameState = useGameContext();
+  const {user} = useUserContext();
 
 
 
@@ -25,12 +25,12 @@ function App() {
 
 
   return (
-    <>
-      <GameProvider>
-        <Board board={myBoard} />
+    <GameProvider>
+      <UserProvider>
+        <Board board={user.board} />
         <ShipSelector />
-      </GameProvider>
-    </>
+      </UserProvider>
+    </GameProvider>
   )
 
 }

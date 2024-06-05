@@ -1,6 +1,4 @@
-import { useGameContext } from "@/context/gameContext"
 import { StyledShip } from "../atoms"
-
 
 interface Props {
     size: number,
@@ -11,7 +9,7 @@ interface Props {
 const Ship = ({ size, id, orientation}: Props) => {
 
   const handleClick = () => {
-    
+
   }
 
     return (

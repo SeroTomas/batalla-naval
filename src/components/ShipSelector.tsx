@@ -1,9 +1,10 @@
+import { useUserContext } from "@/context";
 import Ship from "./Ship"
-import { useUserFleetContext } from "@/context"
+
 
 const ShipSelector = () => {
 
-    const {userFleet:{fleet}} = useUserFleetContext();
+    const {user:{fleet}} = useUserContext();
 
     return (
         <div>

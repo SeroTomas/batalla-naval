@@ -2,7 +2,7 @@ import { BoxInterface } from "@/models";
 import { useGameContext } from "@/context/gameContext";
 import { StyledBox } from "../atoms";
 
-const Box = ({ coordinate, state }: BoxInterface) => {
+const Box = ({ coordinate}: BoxInterface) => {
 
     const {game, setGame} = useGameContext();
     
