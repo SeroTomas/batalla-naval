@@ -17,3 +17,12 @@ export interface ColumnInterface{
 export interface BoardInterface{
     board: Board;
 }
+
+export interface Ship {
+    id: number
+    name:string
+    hits: number
+    size: number
+    coordinates: Coordinate[] | null
+    orientation: string
+}

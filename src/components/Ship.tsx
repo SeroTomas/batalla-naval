@@ -10,11 +10,9 @@ interface Props {
 
 const Ship = ({ size, id, orientation}: Props) => {
 
-    const {game, setGame} = useGameContext();
-
-    const handleClick = () => {
-        setGame({...game, shipSelected: id})
-    }
+  const handleClick = () => {
+    
+  }
 
     return (
         <StyledShip onClick={handleClick}>

@@ -1,2 +1,2 @@
 export * from './createBoard';
-export * from './ships';
+export * from './fleet';

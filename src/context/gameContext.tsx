@@ -1,16 +1,7 @@
-
-import { ships, Ship } from "@/utils";
 import { createContext, useContext, useState } from "react";
 
 interface InitialGameState {
     coordinate: string
-
-    shipSelected?: number
-    shipsCoordinates: string[]
-    ships: Ship[]
-
-
-
 
 }
 
@@ -21,10 +12,7 @@ interface GameContext {
 
 const initialGameState: InitialGameState = {
     coordinate: "",
-    
-    shipSelected: 0,
-    shipsCoordinates: [],
-    ships: ships,
+
 }
 
 const initialGameContext: GameContext = {
@@ -41,9 +29,6 @@ interface Props {
 export const GameProvider = ({ children }: Props) => {
 
     const [game, setGame] = useState(initialGameState);
-
-    console.log(game.shipSelected);
-    console.log(game.coordinate);
 
 
     return (

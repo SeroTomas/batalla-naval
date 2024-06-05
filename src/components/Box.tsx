@@ -7,7 +7,7 @@ const Box = ({ coordinate, state }: BoxInterface) => {
     const {game, setGame} = useGameContext();
     
     const handlerClick = () => {
-        setGame({...game, coordinate})  
+        setGame({...game, coordinate}) 
     }
 
     return (

@@ -1,14 +1,14 @@
-import { useGameContext } from "@/context/gameContext"
 import Ship from "./Ship"
+import { useUserFleetContext } from "@/context"
 
 const ShipSelector = () => {
 
-    const { game: { ships } } = useGameContext();
+    const {userFleet:{fleet}} = useUserFleetContext();
 
     return (
         <div>
             {
-                ships.map(ship => <Ship
+                fleet.map(ship => <Ship
                     size={ship.size}
                     id={ship.id}
                     orientation={ship.orientation}
