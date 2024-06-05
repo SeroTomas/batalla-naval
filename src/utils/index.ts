@@ -1,1 +1,2 @@
-export * from './shipInit';
+export * from './createBoard';
+export * from './ships';

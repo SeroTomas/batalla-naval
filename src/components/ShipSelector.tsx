@@ -1,16 +1,19 @@
+import { useGameContext } from "@/context/gameContext"
 import Ship from "./Ship"
 
-
-const ships = [
-    { slots: 5, id: 1 }, { slots: 4, id: 2 }, { slots: 3, id: 3 }, { slots: 3, id: 4 }, { slots: 2, id: 5 }
-]
-
 const ShipSelector = () => {
+
+    const { game: { ships } } = useGameContext();
 
     return (
         <div>
             {
-                ships.map(ship => <Ship slots={ship.slots} key={ship.id} />)
+                ships.map(ship => <Ship
+                    size={ship.size}
+                    id={ship.id}
+                    orientation={ship.orientation}
+                    key={ship.id}
+                />)
             }
         </div>
     )

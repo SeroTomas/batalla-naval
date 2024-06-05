@@ -1,23 +1,24 @@
 import { useGameContext } from "@/context/gameContext"
 import { StyledShip } from "../atoms"
 
-interface Props{
-    slots: number
+
+interface Props {
+    size: number,
+    id: number
+    orientation: string
 }
 
-const Ship = ({ slots }: Props) => {
+const Ship = ({ size, id, orientation}: Props) => {
 
     const {game, setGame} = useGameContext();
 
     const handleClick = () => {
-        setGame({...game, shipSelected: slots})
-
-
+        setGame({...game, shipSelected: id})
     }
 
     return (
         <StyledShip onClick={handleClick}>
-            Barquito de {slots}
+            Barquito de {id}
         </StyledShip>
     )
 
