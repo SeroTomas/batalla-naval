@@ -4,15 +4,17 @@ import { SHIP_ORIENTATION } from "@/models";
 
 interface Props {
     id: number
-    orientation: string
 }
 
-const Ship = ({ id, orientation }: Props) => {
 
-    const { user, setUser } = useUserContext();
 
+const Ship = ({ id }: Props) => {
+
+    const { user:{fleet}, setUser } = useUserContext();
+    const {orientation, } = fleet[id];
 
     console.log(orientation)
+
 
 
     const handleClick = () => {
@@ -25,6 +27,8 @@ const Ship = ({ id, orientation }: Props) => {
 
         setUser({ ...user, fleet: updatedFleet });
     };
+
+
 
     return (
         <StyledShip onClick={handleClick}>

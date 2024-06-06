@@ -9,16 +9,23 @@ import { UserProvider, useUserContext, GameProvider } from "./context";
  * juego
  * puntuacion
  * jugar de nuevo
+ * 
+ * quiero ingresar mis barco sal mapa
+ * 
+ * tengo que seleccionar el barco que quiero ubicar
+ * e ingresar las coordenadas donde quiero que mi barco este
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
  */
 
 function App() {
 
   const {user} = useUserContext();
-
-
-
-
-
 
   return (
     <GameProvider>
