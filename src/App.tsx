@@ -11,10 +11,6 @@ import { UserProvider, useUserContext, GameProvider } from "./context";
  * jugar de nuevo
  */
 
-
-
-
-
 function App() {
 
   const {user} = useUserContext();

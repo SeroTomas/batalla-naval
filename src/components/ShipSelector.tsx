@@ -6,11 +6,12 @@ const ShipSelector = () => {
 
     const {user:{fleet}} = useUserContext();
 
+
+
     return (
         <div>
             {
                 fleet.map(ship => <Ship
-                    size={ship.size}
                     id={ship.id}
                     orientation={ship.orientation}
                     key={ship.id}

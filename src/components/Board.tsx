@@ -3,6 +3,8 @@ import { Column, ColumnMarker, RawsMarker, StyledBoard, StyledColumns } from "@/
 
 const Board = ({ board }: BoardInterface) => {
 
+    console.log("board montado")
+
     return (
         <StyledBoard>
             <ColumnMarker />
