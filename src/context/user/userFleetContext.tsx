@@ -13,7 +13,7 @@ export const UserFleetProvider = ({ children }: Props) => {
 
     return (
         <UserFleet.Provider value={{ fleet, setFleet }}>
-
+            {children}
         </UserFleet.Provider>
     )
 
